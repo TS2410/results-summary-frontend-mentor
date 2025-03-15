@@ -10,6 +10,13 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
+    @media (max-width: 600px){
+      #main{
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+      }
+    }
     .attribution {
        font-size: 11px;
        text-align: center;
@@ -29,10 +36,11 @@
     }
     #main{
       display: flex;
-      flex-wrap: wrap;
+      justify-content: center;
       flex-direction: row;
       height: 400px;
-      width: 460px;
+      max-width: 460px;
+      width: 90%;
     }
     #summary{
       background-color: white;
@@ -40,7 +48,8 @@
       flex-direction: column;
       height: 100%;
       padding: 7px 14px 7px 14px;
-      width: 460px;
+      width: 90%;
+      min-width: 300px;
       border-radius: 10px;
     }
     .blu-bg{
@@ -49,7 +58,8 @@
       color: white;
       padding: 8px;
       height: 100%;
-      width: 460px;
+      width: 90%;
+      min-width: 300px;
       text-align: center;
       display: flex;
       flex-direction: column;
@@ -89,13 +99,14 @@
      display: flex;
      align-items: center;
      justify-content: space-between;
-     margin: 10px 0;
+     margin: 10px;
      width: 90%;
      height: 20px;
      padding: 12px;
     }
     button{
       border-radius: 50px;
+      border: none;
       color: white;
       background-color: hsl(224, 30%, 27%);
       height: 55px;
@@ -104,6 +115,9 @@
       background: linear-gradient(hsla(256, 72%, 46%, 1), hsl(241, 81%, 54%));
       font-weight: bold;
     }
+    button:active{
+      background: linear-gradient(hsl(241, 69%, 45%), rgb(62, 26, 161))
+    }
   </style>
 </head>
   <body>
@@ -111,7 +125,7 @@
     <div class="blu-bg">
       <h3>Your Result</h3>
       <div class="circle">
-        76
+        <span style="font-size: 2em; font-weight: bold;">76</span>
         of 100
       </div>
 
