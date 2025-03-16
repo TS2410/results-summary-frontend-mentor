@@ -13,7 +13,7 @@
     @media (max-width: 600px){
       #main{
         flex-direction: column;
-        width: 100%;
+        width: 100vh;
         align-items: center;
       }
     }
@@ -28,11 +28,9 @@
        color: hsl(228, 45%, 44%); 
       }
     body{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      position: relative;
       background-color: hsl(241, 100%, 89%);
+      height: 100vh;
     }
     #main{
       display: flex;
@@ -41,6 +39,11 @@
       height: 400px;
       max-width: 460px;
       width: 90%;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
     }
     #summary{
       background-color: white;
@@ -111,12 +114,13 @@
       background-color: hsl(224, 30%, 27%);
       height: 55px;
     }
-    button:hover{
+    button:active{
       background: linear-gradient(hsla(256, 72%, 46%, 1), hsl(241, 81%, 54%));
       font-weight: bold;
     }
-    button:active{
-      background: linear-gradient(hsl(241, 69%, 45%), rgb(62, 26, 161))
+    .img-text{
+      display: flex;
+      text-align: center;
     }
   </style>
 </head>
@@ -135,28 +139,36 @@
     <div id="summary">
         <h2 style="font-size: 20px; color: hsl(224, 30%, 27%)">Summary</h2>
       <div id="reaction" class="category">
-        Reaction
+        <div class="img-text">
+        <img src="./assets/images/icon-reaction.svg">Reaction
+      </div>
         <p><span style="font-size: 1.3em; color: hsl(224, 30%, 27%)">80</span>
           <span style="font-size: 0.9em; color: hsl(241, 100%, 89%)">/ 100</span>
         </p>
       </div>
         
       <div id="memory" class="category">
-        Memory
+        <div class="img-text">
+       <img src="./assets/images/icon-memory.svg"> Memory
+      </div>
         <p><span style="font-size: 1.3em; color: hsl(224, 30%, 27%)">92</span>
           <span style="font-size: 0.9em; color: hsl(241, 100%, 89%)">/ 100</span>
         </p>
       </div>
         
       <div id="verbal" class="category">
-        Verbal
+        <div class="img-text">
+       <img src="./assets/images/icon-verbal.svg"> Verbal
+      </div>
         <p><span style="font-size: 1.3em; color: hsl(224, 30%, 27%)">61</span>
           <span style="font-size: 0.9em; color: hsl(241, 100%, 89%)">/ 100</span>
         </p>
       </div>
         
       <div id="visual" class="category">
-        Visual
+        <div class="img-text">
+        <img src="./assets/images/icon-visual.svg">Visual
+      </div>
         <p><span style="font-size: 1.3em; color: hsl(224, 30%, 27%)">72</span> 
           <span style="font-size: 0.9em; color: hsl(241, 100%, 89%)">/100</span>
         </p>
